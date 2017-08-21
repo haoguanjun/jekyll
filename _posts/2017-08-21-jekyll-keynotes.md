@@ -20,18 +20,6 @@ layout 保存在 _layouts 文件夹中，文件的名称即为布局的名称。
 
     <link href="{{site.baseurl}}/css/main.css" rel="stylesheet">
 
-### include 包含其它文件
-在 layout 中，可以通过 include 将大篇内容拆分为多个小的部分，然后通过 include 组合起来。
-每个小片保存在 \_includes 文件夹中，然后通过 {% include 分片名称 %} 来潜入。
-例如：
-
-    {% include header.html %}
-        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-            {{ content }}
-        </main>
-    {% include footer.html %}
-    
- 其中，header.html 和 footer.html 都保存在 /\_includes 文件夹中。
 
 
  
