@@ -16,7 +16,7 @@ layout 保存在 _layouts 文件夹中，文件的名称即为布局的名称。
 
 ### 引用网站中的其它文件
 如果我们将自定义的样式表文件 main.css 保存在 /css/main.css 中，在布局文件，或者其它文件中引用时，可以使用变量来引用。
-{{site.baseurl}} 表示网站的根目录，例如：
+{% raw %} {{site.baseurl}} {% endraw %} 表示网站的根目录，例如：
 
     <link href="{{site.baseurl}}/css/main.css" rel="stylesheet">
 
