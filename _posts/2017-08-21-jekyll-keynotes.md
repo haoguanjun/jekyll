@@ -20,6 +20,8 @@ layout 保存在 _layouts 文件夹中，文件的名称即为布局的名称。
 
     <link href="{% raw %}{{site.baseurl}}{% endraw %}/css/main.css" rel="stylesheet">
 
+### raw
+{{%%  %%}}
 
 
  
