@@ -6,5 +6,5 @@ However, it would be great if we could make jsan not to throw in this case, but 
 
 
 ### see also:
-* [toISOString is not a function](https://github.com/zalmoxisus/redux-devtools-extension/issues/315){target: _blank}
-* [It fails to serialize data when passing synthetic events or calls an action directly with reduc-actins](https://github.com/zalmoxisus/redux-devtools-extension/blob/master/docs/Troubleshooting.md#it-fails-to-serialize-data-when-passing-synthetic-events-or-calling-an-action-directly-with-redux-actions){target: _blank}
+* [toISOString is not a function](https://github.com/zalmoxisus/redux-devtools-extension/issues/315){:target="_blank"}
+* [It fails to serialize data when passing synthetic events or calls an action directly with reduc-actins](https://github.com/zalmoxisus/redux-devtools-extension/blob/master/docs/Troubleshooting.md#it-fails-to-serialize-data-when-passing-synthetic-events-or-calling-an-action-directly-with-redux-actions){:target="_blank"}
