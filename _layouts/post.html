@@ -11,7 +11,17 @@ layout: default
         {{ content }}
     </div>
 </article>
-<!-- UY BEGIN -->
-<div id="uyan_frame"></div>
-<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2142234"></script>
-<!-- UY END -->
+<div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: 'haoguanjun',
+  repo: 'jekyll-haoguanjun-github',
+  oauth: {
+    client_id: '007582be1e69cc472815',
+    client_secret: 'fb194985ad9288d1e727d94174eed2784e445b69',
+  },
+})
+gitment.render('container')
+</script>
