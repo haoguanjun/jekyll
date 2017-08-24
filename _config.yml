@@ -4,6 +4,7 @@ title: William Hao
 description: a blog of jekyll.
 email: haoguanjun@gmail.com
 github_username: haoguanjun
+paginate: 10
 defaults:
   -
     scope:
