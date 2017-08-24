@@ -23,7 +23,7 @@ title: 学习 jekyll
 
 {% if page.previous or page.next %}
 <nav>
-    <ul class="pagination">
+    <ul class="pagination justify-content-end">
         {% if page.previous %}
             <li class="page-item">
                 <a class="page-link" href=href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '/index.html', '/' }}"
