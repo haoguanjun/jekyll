@@ -2,6 +2,7 @@
 layout: post
 title: toISOString is not a function 错误分析
 description: 使用 Redux DevTools 遇到 toISOString is not a function 错误的分析。
+---
 
 Most likely you're passing a React Synthetic Event, which cannot be serialized. See the similar issue and the troubleshooting. Note that the solution in that issue will not be available in React 16, since we're relying on React internals. So, I recommend to choose one of the solutions from the troubleshooting.
 
