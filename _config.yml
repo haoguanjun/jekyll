@@ -5,6 +5,8 @@ description: a blog of jekyll.
 email: haoguanjun@gmail.com
 github_username: haoguanjun
 paginate: 10
+gems:
+  - jekyll-feed
 defaults:
   -
     scope:
