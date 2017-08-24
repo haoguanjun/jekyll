@@ -20,3 +20,23 @@ title: 学习 jekyll
     </article>
     {% endfor %}
 </div>
+
+{% if page.previous or page.next %}
+<nav>
+    <ul class="pagination">
+        {% if page.previous %}
+            <li class="page-item">
+                <a class="page-link" href=href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '/index.html', '/' }}"
+                    title="{{ page.previous.title | escape }}">&laquo; 前一页</a>
+            </li>
+        {% endif %}
+        {% if page.next %}
+            <li class="page-item">
+                <a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl }}"
+                    title="{{ page.next.title | escape }}">后一页 &raquo;</a>
+            </li>
+        {% endif %}
+    </ul>
+</nav>
+
+{% endif %}
