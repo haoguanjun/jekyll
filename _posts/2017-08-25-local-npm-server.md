@@ -54,3 +54,4 @@ description: create a local npm server.
 * [Sinopia | 从零开始搭建npm仓库](https://sanwen8.cn/p/1f0pl01.html){:target="_blank"}
 * [sinopia in GitHub](https://github.com/rlidwka/sinopia#override-public-packages){:target="_blank"}
 * [如何使用npm打包发布nodejs程序包](http://blog.csdn.net/billfeller/article/details/41295533){:target="_blank"}
+* [NPM 中文文档 - 发布 npm 包](https://www.kancloud.cn/shellway/npm-doc/199994){:target="_blank"}
