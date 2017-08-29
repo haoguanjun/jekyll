@@ -1,4 +1,20 @@
 <aside class="about">
+    <h3 class="aside-title">站内搜索</h3>
+    <div class="aside-content">
+         <input type="text" name="bing_q" id="bing_q" >
+         <input onclick="bing_go()" type="button" value="Bing 搜索" class="btn btn-small">
+    </div>
+    <script>
+        function google_go() {
+            return location.href
+                ="http://www.bing.com/search?q="
+                    +encodeURIComponent("site:haoguanjun.github.io/"
+                    +"jekyll/ "
+                    +document.getElementById("bing_q").value),!1
+        }
+    </script>
+</aside>
+<aside class="about">
     <h3 class="aside-title">关于</h3>
     <div class="aside-content">
         <p>{{ site.description }}</p>
