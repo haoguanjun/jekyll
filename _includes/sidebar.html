@@ -1,15 +1,15 @@
 <aside class="about">
     <h3 class="aside-title">站内搜索</h3>
     <div class="aside-content">
-         <input type="text" name="bing_q" id="bing_q" >
+         <input type="text" name="google_q" id="google_q" >
          <input onclick="google_go()" type="button" value="Google 搜索" class="btn btn-small">
     </div>
     <script>
        function google_go() {
             return location.href
                 ="http://www.google.com/search?q="
-                    +encodeURIComponent("site:www.cnblogs.com/"
-                    +currentBlogApp+"/ "
+                    +encodeURIComponent("haoguanjun.github.io/"
+                    + "jekyll/ "
                     +document.getElementById("google_q").value),!1
 }
     </script>
