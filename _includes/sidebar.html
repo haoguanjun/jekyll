@@ -2,16 +2,16 @@
     <h3 class="aside-title">站内搜索</h3>
     <div class="aside-content">
          <input type="text" name="bing_q" id="bing_q" >
-         <input onclick="bing_go()" type="button" value="Bing 搜索" class="btn btn-small">
+         <input onclick="google_go()" type="button" value="Google 搜索" class="btn btn-small">
     </div>
     <script>
-        function bing_go() {
+        google_go() {
             return location.href
-                ="http://www.bing.com/search?q="
-                    +encodeURIComponent("site:haoguanjun.github.io/"
-                    +"jekyll/ "
-                    +document.getElementById("bing_q").value),!1
-        }
+                ="http://www.google.com/search?q="
+                    +encodeURIComponent("site:www.cnblogs.com/"
+                    +currentBlogApp+"/ "
+                    +document.getElementById("google_q").value),!1
+}
     </script>
 </aside>
 <aside class="about">
