@@ -5,6 +5,7 @@ Rx.js 有两个主要版本：v4 和 v5，操作符有了许多变化。
 * 更好的调试支持
 * 兼容 [ES7 Observable Spec](https://github.com/zenparsing/es-observable){:target="_blank"}
 
+
 例如，Observer 接口发生了变化：
 * observer.onNext(value) -> observer.next(value)
 * observer.onError(err) -> observer.error(err)
