@@ -5,13 +5,13 @@ Rx.js 有两个主要版本：v4 和 v5，操作符有了许多变化。
 * 更好的调试支持
 * 兼容 [ES7 Observable Spec](https://github.com/zenparsing/es-observable){:target="_blank"}
 
-
 例如，Observer 接口发生了变化：
 * observer.onNext(value) -> observer.next(value)
 * observer.onError(err) -> observer.error(err)
 * observer.onCompleted() -> observer.complete()
+
 所以，原来的 subject.onNext("hi") 现在变成了 subject.next("hi").
-而原来的 dispose() 则成为了 unsubscribe
+而原来的 dispose() 则成为了 unsubscribe().
 
 ### See also
 * [RxJS 5 in GitHub](https://github.com/ReactiveX/rxjs){:target="_blank"}
