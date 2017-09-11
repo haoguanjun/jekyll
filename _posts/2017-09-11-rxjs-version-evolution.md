@@ -24,6 +24,8 @@ Rx.js 有两个主要版本：v4 和 v5，操作符有了许多变化。
 * [RxVision - Observable 可视化工具](http://jaredly.github.io/rxvision/){:target="_blank"}
 * [RxMarbles - Observable 可视化工具](http://rxmarbles.com/){:target="_blank"}
 * [The introduction to Reactive Programming you've been missing](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754){:target="_blank"}
+* [Reactive Programming with RxJS(Pragmatic,2015)](http://vdisk.weibo.com/s/aK8h8G1K3Kixe?category_id=0&parents_ref=aK8h8G1K3KitI){:target="_blank"}
+
 
 
 
