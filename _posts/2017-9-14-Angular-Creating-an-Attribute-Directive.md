@@ -111,6 +111,102 @@ export class ConfirmDirective {
 
 现在，我们拥有了一个在导航到新页面之前的可定制确认信息的按钮。
 
+## 监听元素宿主
+
+监听宿主，也就是指令连接到的 DOM 元素，是指令扩展组件或者元素行为的基本方式。刚刚，我们看到一个常见用例。
+
+```typescript
+@Directive({
+   selector: '[appMyDirective]'
+})
+class MyDirective {
+   @HostListener('click', ['$event'])
+   onClick() {}
+}
+```
+
+我们也可以响应外部的事件，比如来自 `window` 或者 `document`, 通过为监听器添加目标来实现。
+
+```typescript
+@Directive({
+   selector: `[appHighlight]`
+})
+export class HighlightDirective {
+   constructor(private el: ElementRef, private renderer: Renderer) { }
+   @HostListener('document:click', ['$event'])
+   handleClick(event: Event) {
+      if (this.el.nativeElement.contains(event.target)) {
+         this.highlight('yellow');
+      } else {
+         this.highlight(null);
+      }
+   }
+   highlight(color) {
+      this.renderer.setElementStyle(this.el.nativeElement, 'backgroundColor', color);
+   }
+}
+```
+
+    尽管不常用，如果我们希望在组件的宿主元素上注册监听器，还是可以使用 `@HostListener`
+
+## 宿主元素
+
+宿主元素的概念应用于指令和组件两者。
+
+对于指令，此概念相当直接了当。使用指令的模板元素就是宿主元素。如果我们如下实现 `HighlightDirective` 指令。
+
+```html
+<div>
+   <p appHighlight>
+      <span>Text to be highlighted</span>
+   </p>
+</div>
+```
+
+标记 `<p>` 将是宿主元素。如果我们使用自定义的 `TextBoxComponent` 作为宿主，代码将如下所示：
+
+```html
+<div>
+   <app-my-text-box appHighlight>
+      <span>Text to be highlighted</span>
+   </app-my-text-box>
+</div>
+```
+
+对于组件，宿主元素是您通过 `selector` 在组件配置中定义的标记。对于上边示例中的 `TextBoxComponent` 组件，组件类的宿主元素就是 `<app-my-text-box>`。
+
+## 通过指令设置属性
+
+我们可以通过属性指令使用 `@HostBinding` 装饰器来改变宿主元素的属性。
+
+`@HostBinding` 装饰器允许我们可编程地设置指令宿主元素的属性值。工作方式类似模板中定义的属性绑定，除了它专门针对宿主元素。绑定在每个变更检测周期中被检查，如果期望的话，它可以动态改变。
+
+例如，我们希望创建一个指令，可以在按钮被按下时动态添加样式 class。这可能类似如下示例：
+
+```typescript
+import { Directive, HostBinding, HostListener } from '@angular/core';
+
+@Directive({
+   selector: '[appButtonPress]'
+})
+export class ButtonPressDirective {
+   @HostBinding('attr.role') role = 'button';
+   @HostBinding('class.pressed') isPressed: boolean;
+   @HostListener('mousedown') hasPressed() {
+      this.isPressed = true;
+   }
+   @HostListener('mouseup') hasReleased() {
+      this.isPressed = false;
+   }
+}
+```
+
+需要注意到，两个示例中的 `@HostBinding` 我们都为希望影响的属性传递了一个字符串值。如果我们没有为装饰器提供字符串，类的成员名称将被使用。
+
+在第一个 `@HostBinding` 中，我们静态设置 `button` 的 role 属性。对于第二个示例，当 `isPressed` 为真时，`pressed` 将被应用。
+
+    提示：虽然不常用到，在需要的时候，`@HostBinding` 可以用于组件。
+
 
 
 
