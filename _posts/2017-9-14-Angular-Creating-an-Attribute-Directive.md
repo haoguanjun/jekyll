@@ -205,7 +205,7 @@ export class ButtonPressDirective {
 
 在第一个 `@HostBinding` 中，我们静态设置 `button` 的 role 属性。对于第二个示例，当 `isPressed` 为真时，`pressed` 将被应用。
 
-    提示：虽然不常用到，在需要的时候，`@HostBinding` 可以用于组件。
+     提示：尽管不常用，在需要的时候，`@HostBinding` 可以用于组件。
 
 
 
