@@ -5,7 +5,7 @@
 作为示例，我们将创建一个自定义的 textarea 组件，其验证输入用户的输入是否是有效的 Json 串。
 通过验证之后的结果通过绑定显示在表单之外，它仅在用户输入有效的情况下更新。
 
-![](../images/1-implement-custom-form-control.gif)
+![](https://github.com/haoguanjun/jekyll/raw/master/images/1-implement-custom-form-control.gif)
 
 实现步骤
 * 创建组件
