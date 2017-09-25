@@ -253,5 +253,9 @@ export class JsonInputComponent
 }
 ```
 
+## Question
+* 注册回调的 registerOnChange 方法仅仅能支持注册一个回调方法。
+* ControlValueAccessor 用于与 ngForm 配合
+
 See also:
 * [Angular - Implementing a custom form control with validation](https://medium.com/@tarik.nzl/angular-2-custom-form-control-with-validation-json-input-2b4cf9bc2d73){:_target="_blank"}
