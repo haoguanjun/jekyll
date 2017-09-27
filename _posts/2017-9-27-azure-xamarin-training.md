@@ -31,7 +31,8 @@ This is the main repository for AutoMapper, but there's more:
 
 Kudu is the engine behind git deployments in Azure Web Sites. It can also run outside of Azure.
 
-## 
+## [Publish an ASP.NET Core web app to Azure App Service using Visual Studio](https://docs.microsoft.com/en-us/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)
+
 
 
 
