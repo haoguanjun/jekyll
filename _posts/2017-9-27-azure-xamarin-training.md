@@ -27,3 +27,12 @@ This is the main repository for AutoMapper, but there's more:
 
 ## [Azure Portal](https://portal.azure.com)
 
+## [kudo](https://github.com/projectkudu/kudu)
+
+Kudu is the engine behind git deployments in Azure Web Sites. It can also run outside of Azure.
+
+## 
+
+
+
+
